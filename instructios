@@ -1,3 +1,5 @@
+RUN apt-get install -y openjdk-7-jre-headless acl
+
 # set user and group
 groupmod -g ${GROUP_ID} ${GROUP_NAME};
 usermod -g ${GROUP_ID} -u ${USER_ID} ${USER_NAME};
@@ -8,3 +10,4 @@ usermod -g ${GROUP_ID} -u ${USER_ID} ${USER_NAME};
 # when the gocd container is used on QNAP with ContainerStation
 setfacl -m user:${USER_ID}:r /etc/resolv.conf
 setfacl -m user:${USER_ID}:r /etc/hosts
+
