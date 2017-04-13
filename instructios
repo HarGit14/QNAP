@@ -1,4 +1,4 @@
-RUN apt-get install -y openjdk-7-jre-headless acl
+RUN apt-get install -y acl
 
 # set user and group
 groupmod -g ${GROUP_ID} ${GROUP_NAME};
