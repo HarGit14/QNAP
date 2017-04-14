@@ -1,5 +1,8 @@
+# put this in the Dockerfile
 RUN apt-get install -y acl
 
+# put this in the startup script
+# GROUP_ID etc. must be set before as Env-Variable
 # set user and group
 groupmod -g ${GROUP_ID} ${GROUP_NAME};
 usermod -g ${GROUP_ID} -u ${USER_ID} ${USER_NAME};
